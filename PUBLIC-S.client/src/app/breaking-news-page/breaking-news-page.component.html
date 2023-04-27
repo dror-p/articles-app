@@ -1,0 +1,18 @@
+<div class="center">
+    <button mat-icon-button (click)="onClickedSearch()" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" >
+        <mat-icon>search</mat-icon>
+      </button>
+      
+        <mat-form-field >
+          <input matInput  type="text" value="search" [(ngModel)]='searchGen'>
+        </mat-form-field>
+<table >
+<tr class="updates" *ngFor="let update of updates">
+    <td class="updates">
+    <p class="updateTitle">{{update.date}}</p>
+    <p class="updateContent">{{update.content}}</p>
+    <hr>
+    </td>
+  </tr>
+</table>
+</div>

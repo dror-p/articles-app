@@ -1,0 +1,42 @@
+<div class="headerPub">
+  <mat-grid-list cols="3" rowHeight="7:1" class="gridList">
+    <mat-grid-tile>
+      {{date | date :'short' }}
+
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a class="PUBLIC" routerLink="homepage"> PUBLIC S.</a>
+    </mat-grid-tile>
+    <mat-grid-tile >
+
+      <angular-weather-widget class="widget"
+  [APIKEY]="'c61c6ba0a08dd64dfab3959fd5da42ea'"
+  [width]="'10vw'"
+  [height]="'12vh'"
+  [backgroundColor]="''" 
+  [isBoxShadow]="false"
+  [borderRadius]="''"
+  [locationFontSize]="'1.2vw'"
+  [locationFontColor]="'#000000'"
+  [status]="false"
+  [statusFontColor]="'gray'"
+  [statusFontSize]="'0.8vw'"
+  [temperature]="true"
+  [tempratureFontColor]="'#990000'"
+  [tempratureFontSize]="'1vw'"
+  [weatherImages]="true"
+  [weatherImageWidth]="'2.7vw'"
+  [weatherImageHeight]="'2.7vw'"
+  [geoLocation]="false"
+  [location]="'Jerusalem'"
+  [isWind]="false"
+  [windFontColor]="'#000000'" 
+  [windFontSize]="''"
+  [humidityFontColor]="'#000000'" 
+  [humidityFontSize]="'0vw'">
+</angular-weather-widget>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<hr class="seperator">
+

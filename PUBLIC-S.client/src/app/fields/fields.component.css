@@ -1,0 +1,37 @@
+.tabs{
+  position: block;
+  margin-left: 10vw  ;
+  margin-right: 1vw;
+  width: fit-content;
+}
+
+.search{
+  margin-left: 20vw;
+}
+
+.datepicker{
+  margin-left: 2vw;
+}
+
+/* Styles for tab labels */
+.mat-tab-label {
+  min-width: 1vw !important;
+  padding: 1vw;
+  background-color: transparent;
+  color: #333333;
+  font-weight: 700;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  min-width: 1vw !important;
+  padding: 0.5vw ;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+  background-color: black;
+}

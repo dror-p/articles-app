@@ -1,0 +1,27 @@
+<div class="center" >
+<br/>
+<h1>
+    {{currArticle.title}}
+</h1>
+<h3>
+    {{currArticle.subTitle}}
+</h3>
+<img class="image" src="{{currArticle.imageUrl}}">
+<br/>
+<table>
+    <tr>
+        <td>
+            <ngx-avatar src="assets/writing.jpg"></ngx-avatar>
+        </td>
+        <td>
+            {{currArticle.firstName}} {{currArticle.lastName}}. {{currArticle.field}}.
+        </td>
+    </tr>
+    
+</table>
+<div class="content">
+    <br/>
+{{currArticle.content}}
+
+  </div>
+</div>

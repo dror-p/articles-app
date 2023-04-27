@@ -1,0 +1,27 @@
+<div class="newsBody">
+  <table  class="gridList">
+    <tr clas="articles">
+      <td>
+        <app-article  [articles]="articles" (articleChange)="this.articles= $event"></app-article>
+      </td>
+      <td>
+      <table class="tableUpdates">
+        <tbody>
+      <tr class="updates" *ngFor="let update of updates">
+        <td class="updates">
+        <p class="updateTitle">{{update.date}}</p>
+        <p class="updateContent">{{update.content}}</p>
+        <hr>
+        </td>
+        
+
+      </tr>
+      <a [routerLink]="['/breaking']" >
+        more breaking news...
+      </a>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </table>
+</div>

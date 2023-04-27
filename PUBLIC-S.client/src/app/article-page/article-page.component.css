@@ -1,0 +1,40 @@
+.center {
+    margin: auto;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.example-header-image {
+    background-image: url('https://profiles.sulekha.com/mstore/24036103/albums/default/thumbnailfull/writing.jpg');
+    background-size: cover;
+  }
+
+h1{
+    font-size: xx-large;
+    font-family: 'Times New Roman';
+}
+
+h3{
+    font-size: large;
+    color: grey;
+    font-family:  serif;
+}
+
+.content{
+    font-family: georgia,'times new roman',times,serif;
+}
+
+.image{
+    object-fit: cover;
+    margin-bottom: 2vh;
+    max-height: 90vh;
+    max-width: 100vw;
+}
+
+td {
+    vertical-align:bottom;
+    font-size: medium;
+    font-family: fantasy;
+    text-align:center;
+}

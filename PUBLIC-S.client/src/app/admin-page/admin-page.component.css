@@ -1,0 +1,37 @@
+.center {
+    margin: auto;
+    padding: 10px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+table {
+    width: 80%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 75%;
+  }
+  
+  td, th {
+    width: 20%;
+  }
+h1{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.average{
+  color: cornflowerblue !important;
+}
+
+.piechart{
+    margin-left: 5%;
+    display: inline-block;
+    width: 40vw !important;
+    height: 40vh !important;
+}
+  
+.tableStats{
+  padding-left: 10% !important;
+}

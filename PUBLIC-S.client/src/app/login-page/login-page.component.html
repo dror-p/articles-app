@@ -1,0 +1,29 @@
+<form class="example-form center"  [formGroup]="login" (ngSubmit)="onSubmit()">
+    <br/>
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>your email</mat-label>
+        <input   type="email" matInput [formControl]="emailFormControl" formControlName="username" [errorStateMatcher]="matcher"
+               placeholder="pacher@gmail.com">
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [formControl]="passwordFormControl" formControlName="password" [errorStateMatcher]="matcher"
+               placeholder="Aa123456">
+        
+        <mat-error *ngIf="passwordFormControl.hasError('minLength') && !emailFormControl.hasError('required')">
+          Please enter a valid password
+        </mat-error>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br/>
+      <button mat-raised-button class="buttoncolor" >
+        SUBMIT
+      </button>
+      </form>
+

@@ -1,0 +1,65 @@
+<form class="example-form center" [formGroup]="register" (ngSubmit)="onSubmit()">
+    <br/>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" formControlName="email" [errorStateMatcher]="matcher"
+             placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>first name</mat-label>
+      <input type="text" matInput [formControl]="firstNameFormControl" formControlName="firstName" [errorStateMatcher]="matcher"
+             placeholder="Ex. Dror">
+      <mat-error *ngIf="firstNameFormControl.hasError('required')">
+        first name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>last name</mat-label>
+        <input   type="text" matInput [formControl]="lastNameFormControl" formControlName="lastName" [errorStateMatcher]="matcher"
+               placeholder="Picherski">
+        <mat-error *ngIf="lastNameFormControl.hasError('required')">
+          last name is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+    
+    <br/>
+    <mat-form-field class="example-full-width">
+      <mat-label>country</mat-label>
+      <mat-select formControlName="countryFormControl" [errorStateMatcher]="matcher" formControlName="country" >
+        <mat-option *ngFor="let country of countryList" [value]="country._id">
+          {{country.country}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="countryFormControl.hasError('required')">
+        country is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher" formControlName="password"
+               placeholder="Aa123456">
+        
+        <mat-error *ngIf="passwordFormControl.hasError('minLength') && !emailFormControl.hasError('required')">
+          Please enter a valid password
+        </mat-error>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+    <br/>
+      
+  <button mat-raised-button class="buttoncolor" >
+    SUBMIT
+  </button>
+  </form>
+
